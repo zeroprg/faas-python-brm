@@ -29,7 +29,7 @@ WORKDIR /root/
 COPY index.py .
 COPY RulesFactory.py .
 COPY RuleEvaluator.py .
-COPY BRMRulesInColumns.xlsx .
+COPY BRMRulesInRows.xlsx .
 COPY matrixOfParams.xlsx .
 
 # Open FaaS
@@ -45,4 +45,4 @@ HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
 CMD [ "fwatchdog" ]
 
 # Use this line  if you want to use bare Docker image
-#CMD [ "python3", "./index.py" ]
+#eMD [ "python3", "./index.py" ]

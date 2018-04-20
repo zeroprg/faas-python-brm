@@ -3,15 +3,15 @@ import RulesFactory
 def get_stdin():
     buf = ""
     for line in sys.stdin:
-         buf = buf + line
-
+        buf = buf + line
     return buf
 
 if(__name__ == "__main__"):
+    st = get_stdin()
+    #st ='!!!'
+    #ret = RulesFactory.invoke('')
     print("################### Welcome to BRM engine ###################### ")
-    data =  sys.stdin.readlines()
-    print ( "Request:", data  )
-    # pass the first line only 
-    print(RulesFactory.invoke(data[0]))
-#   print(st)
-
+    print ( "Request:", st  )
+    ret = RulesFactory.invoke(st)
+    #ret = 'Cool!!'
+    print(ret)
